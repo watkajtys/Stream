@@ -4,6 +4,8 @@ require 'rails/test_help'
 
 class ActiveSupport::TestCase
   # Drop all collections after each test case.
-  Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+   setup {
+      Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+   }
 
 end
