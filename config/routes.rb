@@ -4,6 +4,8 @@ Stream::Application.routes.draw do
       resources :images
     end
   end
+
+  root :to => "static#start"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
