@@ -4,10 +4,14 @@
    $locationProvider.html5Mode(true)
 
    $routeProvider
-      .when("/", {template: "images/index", controller: "ImagesController"})
-      .when("/images", {template: "images/index", controller: "ImagesController"})
-      .when("/images/:id", {template: "images/show", controller: "ImageController"})
-      .when("/images/:id/edit", {template: "images/edit", controller: "ImageController"})
-      .when("/images/new", {template: "images/index", controller: "ImagesController"})
-      .otherwise({template: "Page not found by angular. This is a sad day."})
-   )
+      .when("/", {templateUrl: "images/index", controller: "ImagesController"})
+      .when("/images", {templateUrl: "images/index", controller: "ImagesController"})
+      .when("/images/new", {templateUrl: "images/index", controller: "ImagesController"})
+      .when("/images/:id", {templateUrl: "images/show", controller: "ImageController"})
+      .when("/images/:id/edit", {templateUrl: "images/edit", controller: "ImageController"})
+      .otherwise({templateUrl: "Page not found by angular. This is a sad day."})
+)
+
+@stream.run(['$window', '$templateCache', ($window, $templateCache) ->
+   $templateCache.put(name, templateFunction) for name, templateFunction of $window.JST
+])
