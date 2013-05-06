@@ -1,1 +1,6 @@
 %h1 this is show.hamlc
+%h1 {{image.title}}
+%h2 {{image.description}}
+%img{:'ng-src' => "{{image.url}}"}
+
+%a{:href => '/images'} Home

@@ -1,1 +1,8 @@
 %h1 this is index.hamlc
+%a{:href => '/images/new'} New
+
+%div.image{:'ng-repeat' => 'image in images'}
+   %h2 {{image.title}}
+   %h3 {{image.description}}
+   %a{:href => '/images/99'}
+      %img{:'ng-src' => "{{image.url}}"}
