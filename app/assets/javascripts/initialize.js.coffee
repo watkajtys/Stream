@@ -1,4 +1,4 @@
-@stream = angular.module('stream', [])
+@stream = angular.module('stream', ['ngResource'])
 
 @stream.config(($routeProvider, $locationProvider) ->
    $locationProvider.html5Mode(true)
