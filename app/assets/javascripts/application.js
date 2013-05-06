@@ -19,4 +19,5 @@
 //
 // Stream Resources
 //= require_tree ../templates
+//= require initialize
 //= require_tree ./app/controllers
