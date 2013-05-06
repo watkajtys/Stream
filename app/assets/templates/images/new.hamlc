@@ -16,3 +16,8 @@
    %input{:type => "text", :'ng-model' => "newImage.url"}
 
 %button{:'ng-click' => "saveImage()"} Save
+
+.preview{:'ng-show' => "newImage.title || newImage.description || newImage.url"}
+   %h2 {{newImage.title}}
+   %h3 {{newImage.description}}
+   %img{:'ng-src' => "{{newImage.url}}"}
