@@ -16,3 +16,7 @@
 //= require_tree .
 //= require angular
 //= require angular-resource
+//
+// Stream Resources
+//= require_tree ../templates
+//= require_tree ./app/controllers
