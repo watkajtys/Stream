@@ -1,4 +1,4 @@
-@stream.controller("ImagesController", ($scope, $location, Image) ->
+@stream.controller("ImagesController", ($scope, $location, Parser, Image) ->
    console.log 'controller is live'
 
    $scope.images = Image.query()
